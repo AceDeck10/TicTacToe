@@ -1,38 +1,94 @@
 from tkinter import *
-
-# Turn variables. Used to determine turns
-global turn
-turn = 'X'
+# Flip turns
+isOTurn = False
 
 # game input function
 def gameInput(buttonPress):
+    global isOTurn
+    x = 'X'
+    o = 'O'
     if(buttonPress == 'button1'):
-        button1.config(text = turn)
-        button1.config(state = DISABLED)
+        global isOTurn
+        if(not(isOTurn)):
+            button1.config(text = x)
+            button1.config(state = DISABLED)
+            isOTurn = True
+        elif(isOTurn):
+            button1.config(text = o)
+            button1.config(state = DISABLED)
+            isOTurn = False
     elif(buttonPress == 'button2'):
-        button2.config(text = turn)
-        button2.config(state = DISABLED)
+        if(not(isOTurn)):
+            button2.config(text = x)
+            button2.config(state = DISABLED)
+            isOTurn = True
+        elif(isOTurn):
+            button2.config(text = o)
+            button2.config(state = DISABLED)
+            isOTurn = False
     elif(buttonPress == 'button3'):
-        button3.config(text = turn)
-        button3.config(state = DISABLED)
+        if(not(isOTurn)):
+            button3.config(text = x)
+            button3.config(state = DISABLED)
+            isOTurn = True
+        elif(isOTurn):
+            button3.config(text = o)
+            button3.config(state = DISABLED)
+            isOTurn = False
     elif(buttonPress == 'button4'):
-        button4.config(text = turn)
-        button4.config(state = DISABLED)
+        if(not(isOTurn)):
+            button4.config(text = x)
+            button4.config(state = DISABLED)
+            isOTurn = True
+        elif(isOTurn):
+            button4.config(text = o)
+            button4.config(state = DISABLED)
+            isOTurn = False
     elif(buttonPress == 'button5'):
-        button5.config(text = 'X')
-        button5.config(state = DISABLED)
+        if(not(isOTurn)):
+            button5.config(text = x)
+            button5.config(state = DISABLED)
+            isOTurn = True
+        elif(isOTurn):
+            button5.config(text = o)
+            button5.config(state = DISABLED)
+            isOTurn = False
     elif(buttonPress == 'button6'):
-        button6.config(text = turn)
-        button6.config(state = DISABLED)
+        if(not(isOTurn)):
+            button6.config(text = x)
+            button6.config(state = DISABLED)
+            isOTurn = True
+        elif(isOTurn):
+            button6.config(text = o)
+            button6.config(state = DISABLED)
+            isOTurn = False
     elif(buttonPress == 'button7'):
-        button7.config(text = turn)
-        button7.config(state = DISABLED)
+        if(not(isOTurn)):
+            button7.config(text = x)
+            button7.config(state = DISABLED)
+            isOTurn = True
+        elif(isOTurn):
+            button7.config(text = o)
+            button7.config(state = DISABLED)
+            isOTurn = False
     elif(buttonPress == 'button8'):
-        button8.config(text = turn)
-        button8.config(state = DISABLED)
+        if(not(isOTurn)):
+            button8.config(text = x)
+            button8.config(state = DISABLED)
+            isOTurn = True
+        elif(isOTurn):
+            button8.config(text = o)
+            button8.config(state = DISABLED)
+            isOTurn = False
     elif(buttonPress == 'button9'):
-        button9.config(text = turn)
-        button9.config(state = DISABLED)
+        if(not(isOTurn)):
+            button9.config(text = x)
+            button9.config(state = DISABLED)
+            isOTurn = True
+        elif(isOTurn):
+            button9.config(text = o)
+            button9.config(state = DISABLED)
+            isOTurn = False
     else:
         print('error with input')
 

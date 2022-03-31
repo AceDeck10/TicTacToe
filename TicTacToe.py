@@ -1,5 +1,5 @@
 from tkinter import *
-# Flip turns
+
 isOTurn = False
 
 # game input function
@@ -7,8 +7,11 @@ def gameInput(buttonPress):
     global isOTurn
     x = 'X'
     o = 'O'
+    
+    # Check for button presses
     if(buttonPress == 'button1'):
         global isOTurn
+        # check which player's turn it is (repeated fo all buttons)
         if(not(isOTurn)):
             button1.config(text = x)
             button1.config(state = DISABLED)

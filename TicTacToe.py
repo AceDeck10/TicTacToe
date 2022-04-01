@@ -20,6 +20,7 @@ def gameInput(buttonPress):
             button1.config(text = o)
             button1.config(state = DISABLED)
             isOTurn = False
+
     elif(buttonPress == 'button2'):
         if(not(isOTurn)):
             button2.config(text = x)
@@ -29,6 +30,7 @@ def gameInput(buttonPress):
             button2.config(text = o)
             button2.config(state = DISABLED)
             isOTurn = False
+
     elif(buttonPress == 'button3'):
         if(not(isOTurn)):
             button3.config(text = x)
@@ -38,6 +40,7 @@ def gameInput(buttonPress):
             button3.config(text = o)
             button3.config(state = DISABLED)
             isOTurn = False
+
     elif(buttonPress == 'button4'):
         if(not(isOTurn)):
             button4.config(text = x)
@@ -47,6 +50,7 @@ def gameInput(buttonPress):
             button4.config(text = o)
             button4.config(state = DISABLED)
             isOTurn = False
+
     elif(buttonPress == 'button5'):
         if(not(isOTurn)):
             button5.config(text = x)
@@ -56,6 +60,7 @@ def gameInput(buttonPress):
             button5.config(text = o)
             button5.config(state = DISABLED)
             isOTurn = False
+
     elif(buttonPress == 'button6'):
         if(not(isOTurn)):
             button6.config(text = x)
@@ -65,6 +70,7 @@ def gameInput(buttonPress):
             button6.config(text = o)
             button6.config(state = DISABLED)
             isOTurn = False
+
     elif(buttonPress == 'button7'):
         if(not(isOTurn)):
             button7.config(text = x)
@@ -74,6 +80,7 @@ def gameInput(buttonPress):
             button7.config(text = o)
             button7.config(state = DISABLED)
             isOTurn = False
+
     elif(buttonPress == 'button8'):
         if(not(isOTurn)):
             button8.config(text = x)
@@ -83,6 +90,7 @@ def gameInput(buttonPress):
             button8.config(text = o)
             button8.config(state = DISABLED)
             isOTurn = False
+
     elif(buttonPress == 'button9'):
         if(not(isOTurn)):
             button9.config(text = x)
@@ -92,9 +100,9 @@ def gameInput(buttonPress):
             button9.config(text = o)
             button9.config(state = DISABLED)
             isOTurn = False
+
     else:
         print('error with input')
-
 
 # create window
 window = Tk()

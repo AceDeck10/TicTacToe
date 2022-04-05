@@ -126,75 +126,106 @@ def gameInput(buttonPress):
 
 def checkWinState(player, buttonId):
     global gameState
+    global isOTurn
     gameState[buttonId - 1] = player
 
     if(gameState[0] == 'X' and gameState[1] == 'X'  and gameState[2] == 'X' or gameState[0] == 'O' and gameState[1] == 'O'  and gameState[2] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
 
     if(gameState[0] == 'X' and gameState[3] == 'X'  and gameState[6] == 'X' or gameState[0] == 'O' and gameState[3] == 'O'  and gameState[6] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
 
     if(gameState[0] == 'X' and gameState[4] == 'X'  and gameState[8] == 'X' or gameState[0] == 'O' and gameState[4] == 'O'  and gameState[8] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
 
     if(gameState[1] == 'X' and gameState[4] == 'X'  and gameState[7] == 'X' or gameState[1] == 'O' and gameState[4] == 'O'  and gameState[7] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
 
     if(gameState[2] == 'X' and gameState[4] == 'X'  and gameState[6] == 'X' or gameState[2] == 'O' and gameState[4] == 'O'  and gameState[6] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
 
     if(gameState[2] == 'X' and gameState[5] == 'X'  and gameState[8] == 'X' or gameState[2] == 'O' and gameState[5] == 'O'  and gameState[8] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
     
     if(gameState[3] == 'X' and gameState[4] == 'X'  and gameState[5] == 'X' or gameState[3] == 'O' and gameState[4] == 'O'  and gameState[5] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
     
     if(gameState[6] == 'X' and gameState[7] == 'X'  and gameState[8] == 'X' or gameState[6] == 'O' and gameState[7] == 'O'  and gameState[8] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
+            isOTurn = False
+            gameState = [None] * 9
             resetGame()
 
 # Reset game after player win or game over
-# Game logic breaks down after this function is called
-# TODO fix later
 def resetGame():
     button1.config(text = '')
     button1.config(state = NORMAL)

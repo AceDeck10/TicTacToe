@@ -132,13 +132,9 @@ def checkWinState(player, buttonId):
     if(gameState[0] == 'X' and gameState[1] == 'X'  and gameState[2] == 'X' or gameState[0] == 'O' and gameState[1] == 'O'  and gameState[2] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
-            isOTurn = False
-            gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
-            isOTurn = False
-            gameState = [None] * 9
             resetGame()
 
     if(gameState[0] == 'X' and gameState[3] == 'X'  and gameState[6] == 'X' or gameState[0] == 'O' and gameState[3] == 'O'  and gameState[6] == 'O'):
@@ -227,6 +223,11 @@ def checkWinState(player, buttonId):
 
 # Reset game after player win or game over
 def resetGame():
+    global gameState
+    global isOTurn
+    isOTurn = False
+    gameState = [None] * 9
+
     button1.config(text = '')
     button1.config(state = NORMAL)
 

@@ -268,6 +268,8 @@ def resetGame():
 
 # Create gui
 window = Tk()
+window.title("Tic Tac Toe")
+window.geometry("400x400")
 button1 = Button(window, text='')
 button1.config(command = lambda m = 1: gameInput(m))
 button1.config(font = ('Ink Free', 50, 'bold'))

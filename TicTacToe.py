@@ -3,6 +3,7 @@
 
 from tkinter import *
 from tkinter import messagebox
+import tkinter.font as tkFont
 
 # Turn variable (Boolean): Used to determine player turns
 isOTurn = False
@@ -269,59 +270,70 @@ def resetGame():
 # Create gui
 window = Tk()
 window.title("Tic Tac Toe")
-window.geometry("400x400")
-button1 = Button(window, text='')
+font = tkFont.Font(family="Helvetica", size=60, weight = tkFont.BOLD)
+blankImage = PhotoImage()
+
+button1 = Button(window, image = blankImage, text='', compound = CENTER)
 button1.config(command = lambda m = 1: gameInput(m))
 button1.config(font = ('Ink Free', 50, 'bold'))
-button1.config(height = 1, width = 2)
+square_size = font.metrics('linespace')
+button1.config(height = square_size, width = square_size)
 button1.grid(row = 1, column = 1)
 
-button2 = Button(window, text='')
+button2 = Button(window, image = blankImage, text='', compound = CENTER)
 button2.config(command = lambda m = 2: gameInput(m))
 button2.config(font = ('Ink Free', 50, 'bold'))
-button2.config(height = 1, width = 2)
+square_size = font.metrics('linespace')
+button2.config(height = square_size, width = square_size)
 button2.grid(row = 1, column = 2)
 
-button3 = Button(window, text='')
+button3 = Button(window, image = blankImage, text='', compound = CENTER)
 button3.config(command = lambda m = 3: gameInput(m))
 button3.config(font = ('Ink Free', 50, 'bold'))
-button3.config(height = 1, width = 2)
+square_size = font.metrics('linespace')
+button3.config(height = square_size, width = square_size)
 button3.grid(row = 1, column = 3)
 
-button4 = Button(window, text='')
+button4 = Button(window, image = blankImage, text='', compound = CENTER)
 button4.config(command = lambda m = 4: gameInput(m))
 button4.config(font = ('Ink Free', 50, 'bold'))
-button4.config(height = 1, width = 2)
+square_size = font.metrics('linespace')
+button4.config(height = square_size, width = square_size)
 button4.grid(row = 2, column = 1)
 
-button5 = Button(window, text='')
+button5 = Button(window, image = blankImage, text='', compound = CENTER)
 button5.config(command = lambda m = 5: gameInput(m))
 button5.config(font = ('Ink Free', 50, 'bold'))
-button5.config(height = 1, width = 2)
+square_size = font.metrics('linespace')
+button5.config(height = square_size, width = square_size)
 button5.grid(row = 2, column = 2)
 
-button6 = Button(window, text='')
+button6 = Button(window, image = blankImage, text='', compound = CENTER)
 button6.config(command = lambda m = 6: gameInput(m))
 button6.config(font = ('Ink Free', 50, 'bold'))
-button6.config(height = 1, width = 2)
+square_size = font.metrics('linespace')
+button6.config(height = square_size, width = square_size)
 button6.grid(row = 2, column = 3)
 
-button7 = Button(window, text='')
+button7 = Button(window, image = blankImage, text='', compound = CENTER)
 button7.config(command = lambda m = 7: gameInput(m))
 button7.config(font = ('Ink Free', 50, 'bold'))
-button7.config(height = 1, width = 2)
+square_size = font.metrics('linespace')
+button7.config(height = square_size, width = square_size)
 button7.grid(row = 3, column = 1)
 
-button8 = Button(window, text='')
+button8 = Button(window, image = blankImage, text='', compound = CENTER)
 button8.config(command = lambda m = 8: gameInput(m))
 button8.config(font = ('Ink Free', 50, 'bold'))
-button8.config(height = 1, width = 2)
+square_size = font.metrics('linespace')
+button8.config(height = square_size, width = square_size)
 button8.grid(row = 3, column = 2)
 
-button9 = Button(window, text='')
+button9 = Button(window, image = blankImage, text='', compound = CENTER)
 button9.config(command = lambda m = 9: gameInput(m))
 button9.config(font = ('Ink Free', 50, 'bold'))
-button9.config(height = 1, width = 2)
+square_size = font.metrics('linespace')
+button9.config(height = square_size, width = square_size)
 button9.grid(row = 3, column = 3)
 
 window.mainloop() 

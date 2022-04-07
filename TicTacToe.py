@@ -12,114 +12,113 @@ def gameInput(buttonPress):
     
     # Check for button presses
     if(buttonPress == 1):
-        global isOTurn
         # check which player's turn it is (repeated for all buttons)
         if(not(isOTurn)):
             button1.config(text = x)
             button1.config(state = DISABLED)
-            checkWinState(x, buttonPress)
             isOTurn = True
+            checkWinState(x, buttonPress)
         elif(isOTurn):
             button1.config(text = o)
             button1.config(state = DISABLED)
-            checkWinState(o, buttonPress)
             isOTurn = False
+            checkWinState(o, buttonPress)
 
     elif(buttonPress == 2):
         if(not(isOTurn)):
             button2.config(text = x)
             button2.config(state = DISABLED)
-            checkWinState(x, buttonPress)
             isOTurn = True
+            checkWinState(x, buttonPress)
         elif(isOTurn):
             button2.config(text = o)
             button2.config(state = DISABLED)
-            checkWinState(o, buttonPress)
             isOTurn = False
+            checkWinState(o, buttonPress)
 
     elif(buttonPress == 3):
         if(not(isOTurn)):
             button3.config(text = x)
             button3.config(state = DISABLED)
-            checkWinState(x, buttonPress)
             isOTurn = True
+            checkWinState(x, buttonPress)
         elif(isOTurn):
             button3.config(text = o)
             button3.config(state = DISABLED)
-            checkWinState(o, buttonPress)
             isOTurn = False
+            checkWinState(o, buttonPress)
 
     elif(buttonPress == 4):
         if(not(isOTurn)):
             button4.config(text = x)
             button4.config(state = DISABLED)
-            checkWinState(x, buttonPress)
             isOTurn = True
+            checkWinState(x, buttonPress)
         elif(isOTurn):
             button4.config(text = o)
             button4.config(state = DISABLED)
-            checkWinState(o, buttonPress)
             isOTurn = False
+            checkWinState(o, buttonPress)
 
     elif(buttonPress == 5):
         if(not(isOTurn)):
             button5.config(text = x)
             button5.config(state = DISABLED)
-            checkWinState(x, buttonPress)
             isOTurn = True
+            checkWinState(x, buttonPress)
         elif(isOTurn):
             button5.config(text = o)
             button5.config(state = DISABLED)
-            checkWinState(o, buttonPress)
             isOTurn = False
+            checkWinState(o, buttonPress)
 
     elif(buttonPress == 6):
         if(not(isOTurn)):
             button6.config(text = x)
             button6.config(state = DISABLED)
-            checkWinState(x, buttonPress)
             isOTurn = True
+            checkWinState(x, buttonPress)
         elif(isOTurn):
             button6.config(text = o)
             button6.config(state = DISABLED)
-            checkWinState(o, buttonPress)
             isOTurn = False
+            checkWinState(o, buttonPress)
 
     elif(buttonPress == 7):
         if(not(isOTurn)):
             button7.config(text = x)
             button7.config(state = DISABLED)
-            checkWinState(x, buttonPress)
             isOTurn = True
+            checkWinState(x, buttonPress)
         elif(isOTurn):
             button7.config(text = o)
             button7.config(state = DISABLED)
-            checkWinState(o, buttonPress)
             isOTurn = False
+            checkWinState(o, buttonPress)
 
     elif(buttonPress == 8):
         if(not(isOTurn)):
             button8.config(text = x)
             button8.config(state = DISABLED)
-            checkWinState(x, buttonPress)
             isOTurn = True
+            checkWinState(x, buttonPress)
         elif(isOTurn):
             button8.config(text = o)
             button8.config(state = DISABLED)
-            checkWinState(o, buttonPress)
             isOTurn = False
+            checkWinState(o, buttonPress)
 
     elif(buttonPress == 9):
         if(not(isOTurn)):
             button9.config(text = x)
             button9.config(state = DISABLED)
-            checkWinState(x, buttonPress)
             isOTurn = True
+            checkWinState(x, buttonPress)
         elif(isOTurn):
             button9.config(text = o)
             button9.config(state = DISABLED)
-            checkWinState(o, buttonPress)
             isOTurn = False
+            checkWinState(o, buttonPress)
 
     else:
         print('error with input')
@@ -132,9 +131,17 @@ def checkWinState(player, buttonId):
     if(gameState[0] == 'X' and gameState[1] == 'X'  and gameState[2] == 'X' or gameState[0] == 'O' and gameState[1] == 'O'  and gameState[2] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
+            isOTurn = False
+            gameState = [None] * 9
+            print(isOTurn)
+            print(gameState)
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
+            isOTurn = False
+            gameState = [None] * 9
+            print(isOTurn)
+            print(gameState)
             resetGame()
 
     if(gameState[0] == 'X' and gameState[3] == 'X'  and gameState[6] == 'X' or gameState[0] == 'O' and gameState[3] == 'O'  and gameState[6] == 'O'):
@@ -223,11 +230,6 @@ def checkWinState(player, buttonId):
 
 # Reset game after player win or game over
 def resetGame():
-    global gameState
-    global isOTurn
-    isOTurn = False
-    gameState = [None] * 9
-
     button1.config(text = '')
     button1.config(state = NORMAL)
 

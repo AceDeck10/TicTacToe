@@ -1,10 +1,16 @@
+# Tic Tac Toe game
+# @author Austine D. Odhiambo
+
 from tkinter import *
 from tkinter import messagebox
 
+# Turn variable: Used to determine player turns
 isOTurn = False
+# Game state variable: Used to store game state
 gameState = [None] * 9
 
-# game input function
+# Game I/O function
+# Gets the buttons presses, checks the player who pressed, displays letter on the button
 def gameInput(buttonPress):
     global isOTurn
     x = 'X'
@@ -123,6 +129,8 @@ def gameInput(buttonPress):
     else:
         print('error with input')
 
+# Check win state function
+# checks if x or o has met the win condition
 def checkWinState(player, buttonId):
     global gameState
     global isOTurn
@@ -228,7 +236,8 @@ def checkWinState(player, buttonId):
             gameState = [None] * 9
             resetGame()
 
-# Reset game after player win or game over
+# Reset game function
+# Resets game after player win or game over
 def resetGame():
     button1.config(text = '')
     button1.config(state = NORMAL)
@@ -257,7 +266,7 @@ def resetGame():
     button9.config(text = '')
     button9.config(state = NORMAL)
 
-# create window
+# Create gui
 window = Tk()
 button1 = Button(window, text='')
 button1.config(command = lambda m = 1: gameInput(m))

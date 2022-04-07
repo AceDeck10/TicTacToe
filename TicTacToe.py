@@ -4,9 +4,9 @@
 from tkinter import *
 from tkinter import messagebox
 
-# Turn variable: Used to determine player turns
+# Turn variable (Boolean): Used to determine player turns
 isOTurn = False
-# Game state variable: Used to store game state
+# Game state variable (List): Used to store game state
 gameState = [None] * 9
 
 # Game I/O function

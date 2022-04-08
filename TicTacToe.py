@@ -237,6 +237,8 @@ def checkWinState(player, buttonId):
             isOTurn = False
             gameState = [None] * 9
             resetGame()
+    #Game does not check for stalemate (draw)        
+    # TODO check for stalemate        
 
 # Reset game function
 # Resets game after player win or game over

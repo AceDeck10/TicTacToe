@@ -137,32 +137,33 @@ def checkWinState(player, buttonId):
     global gameState
     global isOTurn
     gameState[buttonId - 1] = player
+    winState = False
 
     if(gameState[0] == 'X' and gameState[1] == 'X'  and gameState[2] == 'X' or gameState[0] == 'O' and gameState[1] == 'O'  and gameState[2] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
-            print(isOTurn)
-            print(gameState)
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
-            print(isOTurn)
-            print(gameState)
             resetGame()
 
     if(gameState[0] == 'X' and gameState[3] == 'X'  and gameState[6] == 'X' or gameState[0] == 'O' and gameState[3] == 'O'  and gameState[6] == 'O'):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
 
@@ -170,11 +171,13 @@ def checkWinState(player, buttonId):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
 
@@ -182,11 +185,13 @@ def checkWinState(player, buttonId):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
 
@@ -194,11 +199,13 @@ def checkWinState(player, buttonId):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
 
@@ -206,11 +213,13 @@ def checkWinState(player, buttonId):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
     
@@ -218,6 +227,7 @@ def checkWinState(player, buttonId):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
@@ -230,13 +240,22 @@ def checkWinState(player, buttonId):
         if(player == 'X'):
             messagebox.showinfo('Message', 'X Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
         elif(player == 'O'):
             messagebox.showinfo('Message', 'O Wins!')
             isOTurn = False
+            winState = True
             gameState = [None] * 9
             resetGame()
+
+    if(winState != True and any(elem is None for elem in gameState) == False):
+        messagebox.showinfo('Message', 'Draw')
+        isOTurn = False
+        gameState = [None] * 9
+        resetGame()
+
     #Game does not check for stalemate (draw)        
     # TODO check for stalemate        
 

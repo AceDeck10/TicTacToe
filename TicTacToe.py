@@ -227,6 +227,7 @@ def checkWinState(player, buttonId):
 def resetGame():
     global isOTurn
     global gameState
+    
     isOTurn = False
     gameState = [None] * 9
 

@@ -1,4 +1,9 @@
 # Tic Tac Toe game
+# 
+# Python source code for a simple Tic Tac Toe game
+# The purpose of this game is to test my python skills, GUI development skills
+# as well as the Tkinter module
+#
 # @author Austine D. Odhiambo
 
 from tkinter import *
@@ -132,7 +137,7 @@ def gameInput(buttonPress):
         print('error with input')
 
 # Check win state function
-# checks if x or o has met the win condition
+# Checks if x or o has met the win condition
 def checkWinState(player, buttonId):
     global gameState
     gameState[buttonId - 1] = player
@@ -270,7 +275,7 @@ window = Tk()
 window.title("Tic Tac Toe")
 window.geometry('435x435')
 window.resizable(False, False)
-# size argument of the tkFont.Font() function is what sets the size of the button
+# Size argument of the tkFont.Font() function is what sets the size of the button
 font = tkFont.Font(family="Helvetica", size=90, weight = tkFont.BOLD)
 blankImage = PhotoImage()
 

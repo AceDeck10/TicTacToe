@@ -6,6 +6,7 @@
 #
 # @author Austine D. Odhiambo
 
+from gc import callbacks
 from tkinter import *
 from tkinter import messagebox
 import tkinter.font as tkFont
@@ -270,7 +271,14 @@ def showRightClickMenu(event):
     finally:
         rightClickMenu.grab_release()
 
-# Create gui
+# Splash screen
+#splashScreen = Tk()
+#splashScreen.geometry("200x200")
+#splashLabel = Label(splashScreen, text="Splash Screen", font=18)
+#splashLabel.pack()
+#splashScreen.after(3000, splashScreen.destroy())
+
+# Create main gui
 window = Tk()
 window.title("Tic Tac Toe")
 window.geometry('435x435')

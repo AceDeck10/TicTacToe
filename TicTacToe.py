@@ -6,7 +6,6 @@
 #
 # @author Austine D. Odhiambo
 
-from gc import callbacks
 from tkinter import *
 from tkinter import messagebox
 import tkinter.font as tkFont

@@ -1,4 +1,4 @@
-#*****************************************************************************
+#******************************************************************************
 # Tic Tac Toe game
 # 
 # Python source code for a simple Tic Tac Toe game
@@ -6,6 +6,8 @@
 # as well as the Tkinter module
 #
 # @author Austine D. Odhiambo
+#
+#******************************************************************************
 
 from tkinter import *
 from tkinter import messagebox

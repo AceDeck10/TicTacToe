@@ -24,7 +24,6 @@ def gameInput(buttonPress):
     global isOTurn
     x = 'X'
     o = 'O'
-    
     # Check for button presses
     # TODO: if possible, use 1 if statment to check for all the buttons
     if(buttonPress == 1):
@@ -274,14 +273,18 @@ def showRightClickMenu(event):
         rightClickMenu.grab_release()
 
 # Splash screen
+#def displaySplashScreen():
 splashScreen = Tk()
 splashScreen.geometry("200x200")
-#splashLabel = Label(splashScreen, text="Splash Screen", font=18)
-#splashLabel.pack()
-#splashScreen.after(3000, splashScreen.destroy())
+splashScreen.overrideredirect(True)
+
+splashLabel = Label(splashScreen, text="Splash Screen", font=18)
+splashLabel.pack()
+
+splashScreen.after(3000, splashScreen.destroy())
 
 # Create main gui
-window = Toplevel()
+window = Tk()
 window.title("Tic Tac Toe")
 window.geometry('435x435')
 window.resizable(False, False)
@@ -357,5 +360,6 @@ rightClickMenu = Menu(window, tearoff = 0)
 rightClickMenu.add_command(label ="Restart", command = resetGame)
 
 window.bind("<Button-3>", showRightClickMenu)
-#window.eval('tk::PlaceWindow . center')
+window.eval('tk::PlaceWindow . center')
+
 mainloop() 

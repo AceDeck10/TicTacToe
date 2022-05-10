@@ -272,17 +272,6 @@ def showRightClickMenu(event):
     finally:
         rightClickMenu.grab_release()
 
-# Splash screen
-#def displaySplashScreen():
-splashScreen = Tk()
-splashScreen.geometry("200x200")
-splashScreen.overrideredirect(True)
-
-splashLabel = Label(splashScreen, text="Splash Screen", font=18)
-splashLabel.pack()
-
-splashScreen.after(3000, splashScreen.destroy())
-
 # Create main gui
 window = Tk()
 window.title("Tic Tac Toe")
@@ -362,4 +351,4 @@ rightClickMenu.add_command(label ="Restart", command = resetGame)
 window.bind("<Button-3>", showRightClickMenu)
 window.eval('tk::PlaceWindow . center')
 
-mainloop() 
+window.mainloop() 

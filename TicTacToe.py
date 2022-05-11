@@ -12,6 +12,7 @@
 from tkinter import *
 from tkinter import messagebox
 import tkinter.font as tkFont
+import os
 
 # Turn variable (Boolean): Used to determine player turns
 isOTurn = False

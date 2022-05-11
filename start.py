@@ -1,4 +1,15 @@
+#******************************************************************************
+# Tic Tac Toe game
+# 
+# Python source code for a simple Tic Tac Toe game
+# The purpose of this game is to test my python skills, GUI development skills
+# as well as the Tkinter module
+#
 # Splash screen
+#
+# @author Austine D. Odhiambo
+#
+#******************************************************************************
 from tkinter import *
 import os
 

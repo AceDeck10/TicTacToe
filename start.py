@@ -3,8 +3,7 @@ from tkinter import *
 import os
 
 def run():
-    splashScreen.after(3000, os.system('python TicTacToe.py'))
-    splashScreen.destroy()
+    os.system('python TicTacToe.py')
 
 splashScreen = Tk()
 splashScreen.geometry("200x200")
@@ -14,6 +13,6 @@ splashLabel = Label(splashScreen, text="Splash Screen", font=18)
 splashLabel.pack()
 
 splashScreen.eval('tk::PlaceWindow . center')
-run()
 
+splashScreen.after(3000, run)
 splashScreen.mainloop()

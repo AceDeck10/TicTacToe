@@ -12,7 +12,6 @@
 from tkinter import *
 from tkinter import messagebox
 import tkinter.font as tkFont
-import os
 
 # Turn variable (Boolean): Used to determine player turns
 isOTurn = False
@@ -278,6 +277,9 @@ window = Tk()
 window.title("Tic Tac Toe")
 window.geometry('435x435')
 window.resizable(False, False)
+
+
+
 # Size argument of the tkFont.Font() function is what sets the size of the button
 font = tkFont.Font(family="Helvetica", size=90, weight = tkFont.BOLD)
 blankImage = PhotoImage()
@@ -352,4 +354,4 @@ rightClickMenu.add_command(label ="Restart", command = resetGame)
 window.bind("<Button-3>", showRightClickMenu)
 window.eval('tk::PlaceWindow . center')
 
-window.mainloop() 
+window.mainloop()

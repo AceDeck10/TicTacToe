@@ -5,7 +5,7 @@
 # The purpose of this game is to test my python skills, GUI development skills
 # as well as the Tkinter module
 #
-# @author Austine D. Odhiambo
+# @author Austine D. Odhiambo AKA Ace Declan
 #
 #******************************************************************************
 

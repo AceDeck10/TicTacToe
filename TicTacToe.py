@@ -104,7 +104,7 @@ def gameInput(buttonPress):
             isOTurn = True
             checkWinState(x, buttonPress)
         elif(isOTurn):
-            button[5].config(text = o)
+            buttons[5].config(text = o)
             buttons[5].config(state = DISABLED)
             isOTurn = False
             checkWinState(o, buttonPress)
@@ -236,8 +236,7 @@ def checkWinState(player, buttonId):
 
     if(winState != True and any(elem is None for elem in gameState) == False):
         messagebox.showinfo('Message', 'Draw')
-        resetGame()
-   
+        resetGame()   
 
 # Reset game function
 # Resets game after player win or game over
@@ -295,15 +294,14 @@ def mainWindow():
     if(splashExists == True):
         splashScreen.destroy()
 
+    global buttons
+    global rightClickMenu
 
     window = Tk()
     window.title("Tic Tac Toe")
     window.geometry('435x435')
     window.resizable(False, False)
 
-    # TODO: use for loop to generate buttons
-    global buttons
-    global button
     buttons = list()
 
     for i in range(3):
@@ -331,7 +329,6 @@ def mainWindow():
 
             buttons[k].grid(sticky = "NWSE")
 
-    global rightClickMenu
     rightClickMenu = Menu(window, tearoff = 0)
     rightClickMenu.add_command(label ="Restart", command = resetGame)
 

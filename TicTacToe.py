@@ -17,6 +17,9 @@ from tkinter import ttk
 from tkinter import messagebox
 import tkinter.font as tkFont
 
+from PIL import ImageTk, Image
+
+
 # Turn variable (Boolean): Used to determine player turns
 isOTurn = False
 # Game state variable (List): Used to store game state
@@ -27,8 +30,16 @@ splashScreen = Tk()
 splashScreen.title("Splash")
 splashScreen.geometry("300x200")
 splashScreen.overrideredirect(True)
-splashLabel = Label(splashScreen, text="Tic Tac Toe\n An Ace Declan game", font=('Montserat', 12))
-splashLabel.pack(pady=20)
+
+splashImageFrame = Frame(splashScreen, width=200, height=200)
+splashImageFrame.pack()
+splashImageFrame.place(anchor='center', relx=0.5, rely=0.5)
+
+img = ImageTk.PhotoImage(Image.open("img/tic-tac-toe.png").resize((200, 200)))
+
+label = Label(splashImageFrame, image = img)
+label.pack()
+
 splashScreen.eval('tk::PlaceWindow . center')
 
 # Game I/O function
@@ -302,11 +313,13 @@ def mainWindow():
 
     window = Tk()
     window.title("Tic Tac Toe")
+    window.iconbitmap("img/tic-tac-toe.ico")
     window.geometry('435x435')
     window.resizable(False, False)
 
     buttons = list()
 
+    # For loop to create buttons
     for i in range(3):
         for j in range(3):
             if(i == 0):

@@ -4,6 +4,9 @@
 # Python source code for a simple Tic Tac Toe game
 # The purpose of this game is to test my python skills, GUI development skills
 # as well as the Tkinter module
+#   
+# WARNING!: This program makes use of global variables 
+# in a manner that is not best practice
 #
 # @author Austine D. Odhiambo AKA Ace Declan
 #

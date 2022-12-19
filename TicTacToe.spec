@@ -5,10 +5,10 @@ block_cipher = None
 
 
 a = Analysis(
-    ['TicTacToe.py'],
+    ['D:/Files/My Code/Python/TicTacToe/TicTacToe.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('D:/Files/My Code/Python/TicTacToe/img/tic-tac-toe.png', 'img/tic-tac-toe.png')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -41,5 +41,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='img\\tic-tac-toe.ico',
+    icon=['D:\\Files\\My Code\\Python\\TicTacToe\\img\\tic-tac-toe.ico'],
 )

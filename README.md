@@ -24,6 +24,7 @@ First to get three in a row wins!
 # What I learned
 This was my first full Python project after learning to write Python.
 I learned:
+
 i)   How to apply Python syntax and concepts in GUI application development.
 
 ii)  How to create windows in Python using the TKinter GUI toolkit.
